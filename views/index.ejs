@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><%= title %></title>
+
+    <!-- VENDOR STYLESHEETS -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+
+    <!-- VENDOR SCRIPTS -->
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+
+    <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <!-- APP STYLESHEETS -->
+    <link rel="stylesheet" href="stylesheets/style.css" />
+
+    <!-- APP SCRIPTS -->
+    <script type="text/javascript" src="javascripts/main.js"></script>
+
+    <script type="text/javascript" src="javascripts/config/states/main.js"></script>
+    <script type="text/javascript" src="javascripts/config/states/auth.js"></script>
+
+    <script type="text/javascript" src="javascripts/controllers/main/home.js"></script>
+    <script type="text/javascript" src="javascripts/controllers/auth/login.js"></script>
+    <script type="text/javascript" src="javascripts/controllers/auth/register.js"></script>
+
+  </head>
+  <body ng-app="Application">
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <div ui-view>
+
+    </div>
+  </body>
+</html>
