@@ -3,9 +3,9 @@
     .module('appControllers')
     .controller('registerCtrl', registerCtrl)
 
-  registerCtrl.$inject = [];
+  registerCtrl.$inject = ['$scope'];
 
-  function registerCtrl() {
+  function registerCtrl($scope) {
 
   }
 

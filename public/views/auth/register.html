@@ -1,15 +1,22 @@
 <form name="form.register">
-  <div class="form-group">
-    <label for="username">Username</label>
-    <input class="form-control" name="username" id="username" ng-model="user.username" type="text" required />
+  <div class="form-group" show-errors>
+    <label class="control-label" for="username">Username</label>
+    <input class="form-control" name="username" id="username" type="text" required
+     ng-model="user.username" ng-minlength="3" ng-maxlength="24" />
+    <error-messages form-element="form.register.username"></error-messages>
   </div>
-  <div class="form-group">
-    <label for="password">Password</label>
-    <input class="form-control" name="password" id="password" ng-model="user.password" type="password" required />
+  <div class="form-group" show-errors>
+    <label class="control-label" for="password">Password</label>
+    <input class="form-control" name="password" id="password" type="password" required
+     ng-model="user.password" ng-minlength="8" ng-maxlength="20" />
+    <error-messages form-element="form.register.password"></error-messages>
   </div>
-  <div class="form-group">
-    <label for="passwordConfirm">Confirm Password</label>
-    <input class="form-control" name="passwordConfirm" id="passwordConfirm" ng-model="user.passwordConfirm" type="password" required />
+  <div class="form-group" show-errors>
+    <label class="control-label" for="passwordConfirm">Confirm Password</label>
+    <input class="form-control" name="passwordConfirm" id="passwordConfirm" type="password" required
+     ng-model="user.passwordConfirm" ng-minlength="8" ng-maxlength="20"
+     password-match="user.password" />
+    <error-messages form-element="form.register.passwordConfirm"></error-messages>
   </div>
   <button class="btn btn-primary" type="submit" ng-disabled="form.register.$invalid">Register</button>
   <button class="btn btn-default" ui-sref="home()">Back to Home</button>

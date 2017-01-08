@@ -1,7 +1,7 @@
 {
   /* global angular */
   var APP_NAME = 'Application';
-  var APP_DEPENDENCIES = ['ui.router', 'ui.bootstrap', 'appControllers', 'appServices', 'appProviders', 'appDirectives'];
+  var APP_DEPENDENCIES = ['ngMessages', 'ui.router', 'ui.bootstrap', 'appControllers', 'appServices', 'appProviders', 'appDirectives'];
 
   angular
     .module(APP_NAME, APP_DEPENDENCIES)
