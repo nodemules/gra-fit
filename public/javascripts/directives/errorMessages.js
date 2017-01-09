@@ -19,14 +19,10 @@
       template: template,
       scope: {
         formElement: '='
-      },
-      link: linkFn
+      }
     }
 
     return directive;
 
-    function linkFn(scope, elem, attrs) {
-      console.log(scope, elem, attrs);
-    }
   }
 }

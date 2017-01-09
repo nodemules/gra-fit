@@ -18,6 +18,6 @@
      password-match="user.password" />
     <error-messages form-element="form.register.passwordConfirm"></error-messages>
   </div>
-  <button class="btn btn-primary" type="submit" ng-disabled="form.register.$invalid">Register</button>
+  <button class="btn btn-primary" type="submit" ng-disabled="form.register.$error">Register</button>
   <button class="btn btn-default" ui-sref="home()">Back to Home</button>
 </form>

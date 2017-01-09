@@ -1,4 +1,5 @@
 {
+  /* global angular */
   angular
     .module('appControllers')
     .controller('loginCtrl', loginCtrl)

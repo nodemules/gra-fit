@@ -1,4 +1,5 @@
 {
+  /* global angular */
   angular
     .module('appDirectives')
     .directive('passwordMatch', passwordMatch);
@@ -14,23 +15,25 @@
     }
 
     return directive;
-  }
 
-  function linkFn(scope, elem, attrs, control) {
-    var checker = function() {
+    function linkFn(scope, elem, attrs, control) {
+      var checker = function() {
 
-      //get the value of the first password
-      var e1 = scope.$eval(attrs.ngModel);
+        //get the value of the first password
+        var e1 = scope.$eval(attrs.ngModel);
 
-      //get the value of the other password
-      var e2 = scope.$eval(attrs.passwordMatch);
+        //get the value of the other password
+        var e2 = scope.$eval(attrs.passwordMatch);
       return e1 && e2 && e1 === e2 && e1.length >= e2.length;
     };
-    scope.$watch(checker, function(n) {
+      scope.$watch(checker, function(n) {
 
-      //set the form control to valid if both
-      //passwords are the same, else invalid
-      control.$setValidity('passwordMatch', n);
-    });
+        //set the form control to valid if both
+        //passwords are the same, else invalid
+        control.$setValidity('passwordMatch', n);
+      });
+    }
+
   }
+
 }

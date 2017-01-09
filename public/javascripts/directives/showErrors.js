@@ -1,26 +1,37 @@
 {
+  /* global angular */
   angular
     .module('appDirectives')
-    .directive('showErrors', function() {
-      var directive = {
-        restrict: 'A',
-        require: '^form',
-        link: function(scope, el, attrs, formCtrl) {
-          // find the text box element, which has the 'name' attribute
-          var inputEl = el[0].querySelector('[name]');
-          // convert the native text box element to an angular element
-          var inputNgEl = angular.element(inputEl);
-          // get the name on the text box so we know the property to check
-          // on the form controller
-          var inputName = inputNgEl.attr('name');
+    .directive('showErrors', showErrors);
 
-          // only apply the has-error class after the user leaves the text box
-          inputNgEl.bind('blur', function() {
-            el.toggleClass('has-error', formCtrl[inputName].$invalid);
-          })
-        }
+  showErrors.$inject = ['$timeout'];
+
+  function showErrors($timeout) {
+    var directive = {
+      restrict: 'A',
+      require: '^form',
+      link: linkFn
+    }
+
+    return directive;
+
+    function linkFn(scope, el) {
+      // find the input element, which has the 'name' attribute
+      var inputEl = el[0].querySelector('[name]');
+      // convert the native input element to an angular element
+      var inputNgEl = angular.element(inputEl);
+
+      // if the element has an input, watch the classes on the
+      // element to determine the error state
+      if (inputNgEl && inputNgEl[0]) {
+        scope.$watch(() => inputNgEl[0].classList.value, (n) => {
+          var classes = n.split(' ');
+          el.toggleClass('has-success', classes.includes('ng-invalid-required') && classes.includes('ng-pristine'));
+          el.toggleClass('has-error', classes.includes('ng-invalid') && !classes.includes('ng-pristine'));
+        }, true)
       }
+    }
 
-      return directive;
-    });
+  }
+
 }
