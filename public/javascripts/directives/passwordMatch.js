@@ -24,8 +24,8 @@
 
         //get the value of the other password
         var e2 = scope.$eval(attrs.passwordMatch);
-      return e1 && e2 && e1 === e2 && e1.length >= e2.length;
-    };
+        return e1 && e2 && e1 === e2 && e1.length >= e2.length;
+      };
       scope.$watch(checker, function(n) {
 
         //set the form control to valid if both
