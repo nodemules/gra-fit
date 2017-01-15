@@ -1,5 +1,11 @@
 <h1>Home is where the heart is.</h1>
-<div>
+<div ng-if="status.isLoggedIn">
+  Welcome {{user.displayName ? user.displayName : user.username}}!
+  <div>
+    <button class="btn btn-primary" ng-click="logoutUser()">Logout</button>
+  </div>
+</div>
+<div ng-if="!status.isLoggedIn">
   <button class="btn btn-primary" ui-sref="login()">Login</button>
   <button class="btn btn-register" ui-sref="register()">Register</button>
 </div>

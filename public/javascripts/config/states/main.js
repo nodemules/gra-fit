@@ -4,7 +4,7 @@
     .module('Application')
     .config(($stateProvider, $urlRouterProvider, $locationProvider) => {
 
-      $urlRouterProvider.otherwise('/');
+      // $urlRouterProvider.otherwise('/');
 
       $stateProvider
         .state('home', {

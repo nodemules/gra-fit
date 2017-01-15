@@ -15,7 +15,7 @@
   var flash = require('connect-flash');
   var cookieParser = require('cookie-parser');
 
-  var api = require('./app/api/main')(express);
+  var api = require('./app/api/main')();
   var configuration = require('./config/configuration.js');
   require('./config/passport')(passport);
 

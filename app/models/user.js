@@ -12,7 +12,10 @@
         'default': 1
       },
       'roleId': Number,
-      'username': String,
+      'username': {
+        'type': String,
+        'unique': true
+      },
       'password': String
     }, {
       timestamps: true
