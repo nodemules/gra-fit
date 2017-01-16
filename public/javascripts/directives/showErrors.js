@@ -1,7 +1,7 @@
 {
   /* global angular */
   angular
-    .module('appDirectives')
+    .module('graFitDirectives')
     .directive('showErrors', showErrors);
 
   showErrors.$inject = ['$timeout'];

@@ -1,6 +1,6 @@
 {
   /* global angular */
-  angular.module('appServices').factory('authService', authService);
+  angular.module('graFitServices').factory('authService', authService);
 
   authService.$inject = ['$resource'];
 

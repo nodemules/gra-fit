@@ -1,14 +1,14 @@
 {
   /* global angular */
-  var APP_NAME = 'Application';
-  var APP_DEPENDENCIES = ['ngMessages', 'ngResource', 'ui.router', 'ui.bootstrap', 'appControllers', 'appServices', 'appProviders', 'appDirectives'];
+  var APP_NAME = 'graFitApp';
+  var APP_DEPENDENCIES = ['ngMessages', 'ngResource', 'ui.router', 'ui.bootstrap', 'graFitControllers', 'graFitServices', 'graFitProviders', 'graFitDirectives'];
 
   angular
     .module(APP_NAME, APP_DEPENDENCIES)
 
-  angular.module('appControllers', [])
-  angular.module('appServices', [])
-  angular.module('appProviders', [])
-  angular.module('appDirectives', [])
+  angular.module('graFitControllers', [])
+  angular.module('graFitServices', [])
+  angular.module('graFitProviders', [])
+  angular.module('graFitDirectives', [])
 
 }

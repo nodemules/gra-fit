@@ -3,13 +3,13 @@
 
     app.get('/', function(req, res) {
       res.render('index.ejs', {
-        title: 'Application'
+        title: 'GraFit Application'
       });
     });
 
     app.get('/*', function(req, res) {
       res.render('index.ejs', {
-        title: 'Application'
+        title: 'GraFit Application'
       });
     })
 

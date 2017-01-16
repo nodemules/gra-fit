@@ -1,7 +1,7 @@
 {
   /* global angular */
   angular
-    .module('appControllers')
+    .module('graFitControllers')
     .controller('homeCtrl', homeCtrl)
 
   homeCtrl.$inject = ['$scope', 'usersService', 'authService'];

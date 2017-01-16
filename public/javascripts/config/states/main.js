@@ -1,7 +1,7 @@
 {
   /* global angular */
   angular
-    .module('Application')
+    .module('graFitApp')
     .config(($stateProvider, $urlRouterProvider, $locationProvider) => {
 
       // $urlRouterProvider.otherwise('/');

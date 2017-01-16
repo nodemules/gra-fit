@@ -1,6 +1,6 @@
 {
   angular
-    .module('appDirectives')
+    .module('graFitDirectives')
     .directive('errorMessages', errorMessages)
 
   errorMessages.$inject = [];

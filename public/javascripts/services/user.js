@@ -1,7 +1,7 @@
 {
   /* global angular */
   angular
-    .module('appServices')
+    .module('graFitServices')
     .factory('usersService', usersService);
 
   usersService.$inject = ['$resource'];

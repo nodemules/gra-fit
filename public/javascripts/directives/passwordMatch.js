@@ -1,7 +1,7 @@
 {
   /* global angular */
   angular
-    .module('appDirectives')
+    .module('graFitDirectives')
     .directive('passwordMatch', passwordMatch);
 
   passwordMatch.$inject = [];

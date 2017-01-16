@@ -1,7 +1,7 @@
 {
   /* global angular */
   angular
-    .module('appProviders')
+    .module('graFitProviders')
     .service('authProvider', authProvider);
 
   authProvider.$inject = ['$http', '$q'];

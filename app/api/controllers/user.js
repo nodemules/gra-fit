@@ -1,5 +1,5 @@
 {
-  function exports(passport) {
+  function exports() {
 
     var express = require('express'),
       api = express.Router(),
@@ -37,7 +37,7 @@
           })
       });
 
-    api.get('/role/:roleId', function(req, res, next) {
+    api.get('/role/:roleId', function(req, res) {
       Users
         .find({
           roleId: req.params.roleId
